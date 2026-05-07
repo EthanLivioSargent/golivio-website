@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Bottleneck from "@/components/Bottleneck";
 import Factory from "@/components/Factory";
+import LiveBuild from "@/components/LiveBuild";
 import Timeline from "@/components/Timeline";
 import Stack from "@/components/Stack";
 import Methodology from "@/components/Methodology";
@@ -44,6 +45,7 @@ export default function HomePage() {
         <Hero />
         <Bottleneck />
         <Factory />
+        <LiveBuild />
         <Timeline />
         <Stack />
         <Methodology />
