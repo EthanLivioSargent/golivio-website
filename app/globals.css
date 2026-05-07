@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-bg-deep text-ink-base font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: rgba(255, 193, 7, 0.32);
+    color: #fff;
+  }
+  *:focus-visible {
+    outline: 2px solid #ffc107;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Reduced motion respect */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-page {
+    @apply mx-auto w-full max-w-page px-6 md:px-10;
+  }
+
+  /* Eyebrows + section titles */
+  .eyebrow {
+    @apply inline-block text-[12px] md:text-[13px] font-bold uppercase tracking-[0.18em] text-gold;
+  }
+  .section-title {
+    @apply text-ink-hi font-bold tracking-[-0.03em] leading-[1.1];
+    font-size: clamp(1.75rem, 3.6vw, 2.6rem);
+  }
+  .section-deck {
+    @apply text-ink-mid leading-relaxed;
+    font-size: clamp(0.95rem, 1.6vw, 1.075rem);
+  }
+
+  /* Buttons */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-gold-500 px-5 py-3 text-[0.95rem] font-bold text-[#0a1628] transition-all hover:bg-gold-600 hover:-translate-y-[1px] focus-visible:ring-2 focus-visible:ring-gold-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deep;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/10 bg-transparent px-5 py-3 text-[0.95rem] font-semibold text-ink-mid transition-all hover:border-gold-500/55 hover:text-gold hover:bg-gold-500/5;
+  }
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-gold-500 bg-transparent px-5 py-3 text-[0.95rem] font-bold text-gold transition-all hover:bg-gold-500/10 hover:-translate-y-[1px];
+  }
+
+  /* Surfaces */
+  .surface {
+    @apply rounded-2xl border border-line bg-bg-panel/80 backdrop-blur-sm;
+  }
+  .surface-glass {
+    @apply rounded-2xl border border-line2 bg-bg-raised/65 backdrop-blur-md;
+  }
+
+  /* Subtle blueprint grid background */
+  .bg-blueprint {
+    background-image: linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+  }
+  .bg-blueprint-fine {
+    background-image: linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: -1px -1px;
+  }
+
+  /* Mask gradient for fading edges */
+  .mask-fade-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+  .mask-fade-top {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+  }
+
+  /* Scroll-reveal class targets — JS adds .in-view */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-1 {
+    transition-delay: 0.05s;
+  }
+  .reveal-2 {
+    transition-delay: 0.12s;
+  }
+  .reveal-3 {
+    transition-delay: 0.2s;
+  }
+  .reveal-4 {
+    transition-delay: 0.28s;
+  }
+
+  /* Terminal / Slart shell mockup */
+  .term {
+    @apply rounded-xl border border-line2 bg-[#08101e] font-mono text-[13px] md:text-[14px] leading-relaxed shadow-elev;
+  }
+  .term-prompt::before {
+    content: "slart>";
+    @apply text-gold mr-2 font-bold;
+  }
+
+  /* Ticker */
+  .ticker-track {
+    display: flex;
+    gap: 2.75rem;
+    white-space: nowrap;
+    animation: ticker 38s linear infinite;
+    will-change: transform;
+  }
+
+  /* Hover lift card */
+  .lift {
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .lift:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 193, 7, 0.45);
+    box-shadow: 0 0 38px rgba(255, 193, 7, 0.08);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: 2px;
+  }
+}
