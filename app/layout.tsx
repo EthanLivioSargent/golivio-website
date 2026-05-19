@@ -4,88 +4,49 @@ import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://golivio.com";
 const SITE_NAME = "Livio — AI Factory";
-const TITLE_DEFAULT = "Livio — Land to Compute in 99 Days. The AI Factory for Hyperscale Data Centers.";
-const DESCRIPTION =
-  "Livio is the AI Factory (LAIF) — a pre-engineered, panelized building system that turns land and power into operational AI compute capacity in as little as 99 days. Spans 20 MW to 1+ GW. Includes Livio Land, Grid, Hub, and the Slart shell.";
+const TITLE_DEFAULT = "Livio — 75% Faster Land to Compute. The AI Factory for Hyperscale Data Centers.";
+const DESCRIPTION = "Livio is the AI Factory (LAIF) — engineering, procurement, and a pre-assembled building system that delivers AI data centers 75% faster, land to operational compute. Includes Livio Grid (engineering & underwriting), Livio Hub (procurement), Livio Smart Shell (panelized buildings), Livio Review (proposal QA), and LAIF (full EPC).";
 
 export const viewport: Viewport = {
-  themeColor: "#0a0e1a",
+  themeColor: "#f7f7f2",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  colorScheme: "dark",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: TITLE_DEFAULT,
-    template: "%s — Livio",
-  },
+  title: { default: TITLE_DEFAULT, template: "%s — Livio" },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   generator: "Next.js",
   keywords: [
-    "AI factory",
-    "AI data center",
-    "hyperscale data center",
-    "panelized construction",
-    "modular data center",
-    "data center procurement",
-    "long-lead equipment",
-    "site intelligence",
-    "land to compute",
-    "LAIF",
-    "Livio",
-    "Livio Building Systems",
-    "Livio Hub",
-    "Livio Grid",
-    "Livio Land",
-    "Slart shell",
-    "data center buildout",
-    "MW data center",
-    "GW data center",
+    "AI factory","AI data center","hyperscale data center",
+    "panelized construction","modular data center","pre-assembled building",
+    "data center procurement","buy-side procurement","long-lead equipment",
+    "site intelligence","DC engineering","DC underwriting","first principles physics",
+    "EPC","data center EPC","land to compute","LAIF",
+    "Livio","Livio Grid","Livio Hub","Livio Smart Shell","Livio Review","Livio Land",
+    "MW data center","GW data center","75% faster construction",
   ],
   authors: [{ name: "Livio", url: SITE_URL }],
   creator: "Livio",
   publisher: "Livio",
   formatDetection: { email: false, address: false, telephone: false },
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
-    type: "website",
-    siteName: SITE_NAME,
-    url: SITE_URL,
-    title: TITLE_DEFAULT,
-    description: DESCRIPTION,
-    locale: "en_US",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Livio — Land to Compute in 99 Days",
-      },
-    ],
+    type: "website", siteName: SITE_NAME, url: SITE_URL,
+    title: TITLE_DEFAULT, description: DESCRIPTION, locale: "en_US",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Livio — 75% Faster Land to Compute" }],
   },
   twitter: {
-    card: "summary_large_image",
-    title: TITLE_DEFAULT,
-    description: DESCRIPTION,
-    images: ["/opengraph-image"],
-    creator: "@golivio",
+    card: "summary_large_image", title: TITLE_DEFAULT, description: DESCRIPTION,
+    images: ["/opengraph-image"], creator: "@golivio",
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
+    index: true, follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
   category: "technology",
 };
@@ -97,68 +58,24 @@ const orgJsonLd = {
   alternateName: ["LIVIO AI Factory", "LAIF", "Livio Building Systems"],
   url: SITE_URL,
   logo: `${SITE_URL}/logo.svg`,
-  sameAs: [
-    "https://www.instagram.com/go.livio/",
-    "https://www.linkedin.com/company/livio-building-systems/",
-  ],
-  slogan: "Land to compute in 99 days.",
+  sameAs: ["https://www.instagram.com/go.livio/","https://www.linkedin.com/company/livio-building-systems/"],
+  slogan: "75% faster land to compute.",
   description: DESCRIPTION,
-  foundingLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Los Altos",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
-  },
+  foundingLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Los Altos", addressRegion: "CA", addressCountry: "US" } },
   knowsAbout: [
-    "AI data center construction",
-    "Hyperscale data center buildout",
-    "Panelized building systems",
-    "Long-lead equipment procurement",
-    "Site intelligence and selection",
-    "Modular MEP integration",
+    "AI data center construction","Hyperscale data center buildout",
+    "Panelized building systems","Long-lead equipment procurement",
+    "Site intelligence and selection","Modular MEP integration",
+    "Data center EPC","First-principles DC engineering",
   ],
   hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Livio Stack",
+    "@type": "OfferCatalog", name: "Livio Stack",
     itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Livio Land",
-          url: "https://land.golivio.com",
-          description: "Parcel intelligence for AI data centers — sites pre-screened for power, fiber, water, zoning.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Livio Grid",
-          url: "https://grid.golivio.com",
-          description: "Site intelligence for hyperscale developers. Reads exact power, water, and climate variables and adapts the design in hours.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Livio Hub",
-          url: "https://hub.golivio.com",
-          description: "Buy-side procurement engine for AI data center developers. 80+ verified vendors, first bids in under 24 hours.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Slart Shell",
-          description: "The agentic command line that ties Land, Grid, and Hub together. One prompt, the full Livio stack.",
-        },
-      },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Livio Grid", url: "https://grid.golivio.com", description: "AI DC Engineering & Underwriting from first principles of physics in 30 minutes. Perpetually free." } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Livio Hub",  url: "https://hub.golivio.com",  description: "Buy-side procurement engine for AI data center developers. Perpetually free." } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Livio Smart Shell", description: "Pre-assembled, panelized building system for 75% faster AI data center construction." } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Livio AI Factory (LAIF)", url: SITE_URL, description: "End-to-end EPC for AI data centers — 75% faster land to compute." } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Livio Review", description: "AI data center proposal review for offtakers and buyers, from first principles of physics, in 5 minutes. Perpetually free." } },
     ],
   },
 };
@@ -168,11 +85,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: SITE_NAME,
   url: SITE_URL,
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${SITE_URL}/?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
+  potentialAction: { "@type": "SearchAction", target: `${SITE_URL}/?q={search_term_string}`, "query-input": "required name=search_term_string" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -181,30 +94,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
-        />
-        {/* Llms hint for AI crawlers */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
-        <Script
-          id="org-jsonld"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-        />
-        <Script
-          id="website-jsonld"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
+        <Script id="org-jsonld" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+        <Script id="website-jsonld" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       </head>
-      <body className="min-h-screen bg-bg-deep text-ink-base">
-        <a
-          href="#main"
-          className="absolute left-2 top-2 z-[200] -translate-y-16 rounded-md bg-gold px-3 py-2 text-sm font-bold text-[#0a1628] focus:translate-y-0 focus:outline-none"
-        >
+      <body className="min-h-screen bg-cream text-text-hi">
+        <a href="#main" className="absolute left-2 top-2 z-[200] -translate-y-16 rounded-full bg-gold px-3 py-2 text-sm font-bold text-[#0a1628] focus:translate-y-0 focus:outline-none">
           Skip to content
         </a>
         {children}
