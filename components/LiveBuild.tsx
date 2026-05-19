@@ -9,8 +9,9 @@ const COLS = 6;
 const ROWS = 3;
 const COUNT = COLS * ROWS;
 
+// Livio palette — gold for active work, sky for installed, emerald for verified
 const STATE_FILL: Record<State, string> = {
-  staged: "#374151", lifting: "#F97316", installed: "#3B82F6", qcd: "#22C55E",
+  staged: "#1e293b", lifting: "#FFC107", installed: "#3B82F6", qcd: "#22C55E",
 };
 const STATE_LABEL: Record<State, string> = {
   staged: "Staged", lifting: "Lifting", installed: "Installed", qcd: "QC verified",
@@ -114,15 +115,15 @@ export default function LiveBuild() {
                       style={{
                         background: STATE_FILL[s],
                         boxShadow:
-                          s === "lifting" ? "0 0 0 1px rgba(249,115,22,0.6), 0 0 24px rgba(249,115,22,0.45)" :
+                          s === "lifting" ? "0 0 0 1px rgba(255,193,7,0.65), 0 0 28px rgba(255,193,7,0.55)" :
                           s === "qcd" ? "0 0 0 1px rgba(34,197,94,0.45)" :
                           s === "installed" ? "0 0 0 1px rgba(59,130,246,0.45)" :
-                          "0 0 0 1px rgba(148,163,184,0.16)",
+                          "0 0 0 1px rgba(148,163,184,0.18)",
                         transform: s === "lifting" ? "translateY(-4px)" : "none",
                       }}>
                       <span className="pointer-events-none absolute inset-0 rounded-md" style={{ background: "linear-gradient(160deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 60%)" }} aria-hidden />
                       {s === "lifting" && (
-                        <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-orange-300" aria-hidden>• lifting</span>
+                        <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-gold-400" aria-hidden>lifting</span>
                       )}
                     </div>
                   ))}
