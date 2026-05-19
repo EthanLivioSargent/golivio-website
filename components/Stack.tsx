@@ -102,7 +102,7 @@ const products: Product[] = [
 
 export default function Stack() {
   return (
-    <section id="stack" className="section-sky relative isolate scroll-mt-24 overflow-hidden border-b border-line py-20 md:py-28" aria-labelledby="stack-h">
+    <section id="stack" className="section-sky relative isolate scroll-mt-24 overflow-hidden border-b border-line/40 py-20 md:py-28" aria-labelledby="stack-h">
       <div className="pointer-events-none absolute inset-0 bg-grid-on-light opacity-50" aria-hidden />
       <div className="container-page relative">
         <div className="max-w-3xl">

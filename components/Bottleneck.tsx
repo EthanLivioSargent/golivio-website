@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 export default function Bottleneck() {
   return (
-    <section className="section-sky relative border-b border-line py-20 md:py-28" aria-labelledby="bottleneck-h">
+    <section className="section-sky relative border-b border-line/40 py-20 md:py-28" aria-labelledby="bottleneck-h">
       <div className="pointer-events-none absolute inset-0 bg-grid-on-light-fine opacity-50" aria-hidden />
       <div className="container-page relative grid gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">

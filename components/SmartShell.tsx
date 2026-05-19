@@ -89,12 +89,18 @@ export default function SmartShell({ variant = "dark" }: { variant?: "dark" | "l
 
   return (
     <div ref={containerRef} className={`${baseCls} relative w-full overflow-hidden p-4 md:p-5`} role="img" aria-label="Livio Smart Shell — a unified command line for the Livio AI Factory stack: land, grid, hub, review, factory.">
-      <div className={`mb-3 flex items-center gap-2 border-b ${chromeBorder} pb-3`}>
-        <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" aria-hidden />
-        <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" aria-hidden />
-        <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" aria-hidden />
-        <span className={`ml-3 select-none font-mono text-[12px] font-semibold uppercase tracking-[0.14em] ${chromeText}`}>smart — the livio shell</span>
-        <span className={`ml-auto rounded border ${isDark ? "border-gold/30 bg-gold/10 text-gold-400" : "border-gold/40 bg-gold/15 text-gold-700"} px-2 py-[2px] font-mono text-[12px] font-bold`}>v1.0</span>
+      <div className={`mb-4 flex items-center gap-2.5 border-b ${chromeBorder} pb-3`}>
+        <span className="flex items-center gap-1.5">
+          <span
+            className={`h-1.5 w-1.5 rounded-full ${isDark ? "bg-gold-400" : "bg-gold-600"} animate-pulse`}
+            style={{ boxShadow: isDark ? "0 0 10px rgba(255,193,7,0.65)" : "0 0 8px rgba(255,193,7,0.45)" }}
+            aria-hidden
+          />
+          <span className={`font-mono text-[10px] font-bold uppercase tracking-[0.22em] ${isDark ? "text-gold-400/75" : "text-gold-700/80"}`}>live</span>
+        </span>
+        <span className={`mx-1 h-3 w-px ${isDark ? "bg-white/15" : "bg-black/10"}`} aria-hidden />
+        <span className={`select-none font-mono text-[12px] font-semibold uppercase tracking-[0.16em] ${chromeText}`}>smart — the livio shell</span>
+        <span className={`ml-auto rounded border ${isDark ? "border-gold/30 bg-gold/10 text-gold-400" : "border-gold/40 bg-gold/15 text-gold-700"} px-2 py-[2px] font-mono text-[11px] font-bold`}>v1.0</span>
       </div>
 
       <div className="min-h-[260px] space-y-1">

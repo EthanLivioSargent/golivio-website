@@ -9,7 +9,7 @@ const phases = [
 
 export default function Timeline() {
   return (
-    <section className="section-cream relative isolate overflow-hidden border-b border-line py-20 md:py-28" aria-labelledby="timeline-h">
+    <section className="section-cream relative isolate overflow-hidden border-b border-line/40 py-20 md:py-28" aria-labelledby="timeline-h">
       <div className="pointer-events-none absolute inset-0 bg-grid-on-light opacity-60" aria-hidden />
       <div className="container-page relative">
         <div className="max-w-3xl">
