@@ -11,11 +11,10 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-cream-50/85 backdrop-blur-xl">
       <nav className="container-page flex h-[72px] items-center justify-between gap-4">
-        <a href="/" className="group flex items-center gap-2 text-text-hi" aria-label="Livio home">
+        <a href="/" className="group flex items-center gap-3 text-text-hi" aria-label="Livio home">
           <Logo className="h-7 w-auto text-text-hi transition-colors group-hover:text-gold-700" />
-          <span className="ml-1 hidden rounded-full border border-gold/30 bg-gold/10 px-2.5 py-[3px] text-[12px] font-bold uppercase tracking-[0.1em] text-gold-700 sm:inline-block">
-            AI Factory
-          </span>
+          <span className="hidden h-4 w-px bg-line2 sm:inline-block" aria-hidden />
+          <span className="hidden text-[13px] font-semibold tracking-[-0.005em] text-text-mid sm:inline-block">The AI factory for data centers</span>
         </a>
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
