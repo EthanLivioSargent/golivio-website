@@ -18,8 +18,8 @@ const config: Config = {
         lineDark2: "rgba(255,255,255,0.16)",
       },
       fontFamily: {
-        sans: ["Inter","ui-sans-serif","system-ui","-apple-system","Segoe UI","Roboto","Helvetica Neue","Arial","sans-serif"],
-        mono: ["JetBrains Mono","SF Mono","Menlo","Monaco","Consolas","ui-monospace","monospace"],
+        sans: ['"Helvetica Neue"', "Helvetica", "Arial", '"Liberation Sans"', "system-ui", "sans-serif"],
+        mono: ['"SF Mono"', "Menlo", "Monaco", "Consolas", "ui-monospace", "monospace"],
       },
       maxWidth: { page: "1200px", prose: "68ch" },
       backgroundImage: {

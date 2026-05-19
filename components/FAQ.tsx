@@ -19,7 +19,7 @@ export default function FAQ() {
       <div className="container-page grid gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-4">
           <Reveal><span className="eyebrow-gold">FAQ</span></Reveal>
-          <Reveal delay={1}><h2 id="faq-h" className="section-title mt-3 text-balance">The questions builders, buyers, and AI teams ask first.</h2></Reveal>
+          <Reveal delay={1}><h2 id="faq-h" className="section-title mt-4 text-balance">The questions builders, buyers, and AI teams ask first.</h2></Reveal>
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-text-mid">
               Short, citable answers to the questions that come up before a kickoff call. If yours isn&rsquo;t here,{" "}
@@ -31,12 +31,12 @@ export default function FAQ() {
           <ul className="divide-y divide-line">
             {faqs.map((f, i) => (
               <Reveal key={f.q} delay={(((i % 4) + 1) as 1 | 2 | 3 | 4)} as="li" className="py-1">
-                <details className="group py-5">
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-[1.04rem] font-semibold text-text-hi transition-colors hover:text-gold-700">
+                <details className="group py-6">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-[18px] font-bold text-text-hi transition-colors hover:text-gold-700">
                     <span className="text-pretty">{f.q}</span>
-                    <span aria-hidden className="mt-1 grid h-7 w-7 flex-shrink-0 place-items-center rounded-full border border-line2 text-gold-700 transition-transform group-open:rotate-45">+</span>
+                    <span aria-hidden className="mt-1 grid h-8 w-8 flex-shrink-0 place-items-center rounded-full border border-line2 text-gold-700 text-[18px] transition-transform group-open:rotate-45">+</span>
                   </summary>
-                  <p className="mt-4 max-w-prose text-[0.96rem] leading-[1.75] text-text-mid">{f.a}</p>
+                  <p className="mt-4 max-w-prose text-[16px] leading-[1.7] text-text-mid">{f.a}</p>
                 </details>
               </Reveal>
             ))}

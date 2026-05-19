@@ -92,15 +92,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
         <Script id="org-jsonld" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <Script id="website-jsonld" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       </head>
       <body className="min-h-screen bg-cream text-text-hi">
-        <a href="#main" className="absolute left-2 top-2 z-[200] -translate-y-16 rounded-full bg-gold px-3 py-2 text-sm font-bold text-[#0a1628] focus:translate-y-0 focus:outline-none">
+        <a href="#main" className="absolute left-2 top-2 z-[200] -translate-y-16 rounded-full bg-gold px-3 py-2 text-base font-bold text-[#0a1628] focus:translate-y-0 focus:outline-none">
           Skip to content
         </a>
         {children}

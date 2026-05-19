@@ -61,11 +61,11 @@ export default function Numbers() {
         <h2 id="numbers-h" className="sr-only">Livio at a glance</h2>
         <div ref={ref} className="grid gap-px overflow-hidden rounded-2xl border border-lineDark2 bg-lineDark2 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
-            <div key={s.label} className="bg-ink p-7 md:p-9">
-              <div className="font-mono text-[2.6rem] font-black leading-none tracking-tight text-gold-400 md:text-[3.2rem]">
+            <div key={s.label} className="bg-ink p-8 md:p-10">
+              <div className="font-mono text-[2.8rem] font-black leading-none tracking-tight text-gold-400 md:text-[3.4rem]">
                 <CountUp {...s} start={start} />
               </div>
-              <div className="mt-3 text-[0.92rem] font-medium text-invert-mid">{s.label}</div>
+              <div className="mt-3.5 text-[16px] font-semibold text-invert-mid">{s.label}</div>
             </div>
           ))}
         </div>

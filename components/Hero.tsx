@@ -11,20 +11,20 @@ export default function Hero() {
       <div className="container-page relative grid items-start gap-12 pt-14 pb-20 md:pt-20 md:pb-28 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.14em] text-gold-700">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-3.5 py-1.5 text-[13px] font-bold uppercase tracking-[0.12em] text-gold-700">
               <span className="h-1.5 w-1.5 rounded-full bg-gold-600" aria-hidden />
               Livio AI Factory · LAIF
             </div>
           </Reveal>
 
           <Reveal delay={1}>
-            <h1 id="hero-h" className="mt-5 text-balance font-bold tracking-[-0.035em] text-text-hi" style={{ fontSize: "clamp(2.4rem, 5.4vw, 4.4rem)", lineHeight: 1.02 }}>
+            <h1 id="hero-h" className="mt-6 text-balance font-bold tracking-[-0.025em] text-text-hi" style={{ fontSize: "clamp(2.6rem, 5.6vw, 4.6rem)", lineHeight: 1.02 }}>
               <span className="text-gold-700">75% faster</span> <span className="whitespace-nowrap">land to compute.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={2}>
-            <p className="mt-6 max-w-2xl text-pretty text-[1.05rem] leading-[1.7] text-text-mid md:text-[1.125rem]">
+            <p className="mt-6 max-w-2xl text-pretty text-[1.15rem] leading-[1.7] text-text-mid md:text-[1.2rem]">
               Livio is the AI Factory. A pre-assembled, panelized building system — combined with first-principles engineering, buy-side procurement, and proposal review — that turns land and power into operational AI compute capacity. From <strong className="font-semibold text-text-hi">20 MW to 1+ GW</strong>. Same methodology every time.
             </p>
           </Reveal>
@@ -50,8 +50,8 @@ export default function Hero() {
                 { k: "1 prompt",     v: "Engineer, source, build" },
               ].map((s) => (
                 <div key={s.k}>
-                  <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-text-low">{s.v}</dt>
-                  <dd className="mt-1 font-mono text-[1.25rem] font-bold text-gold-700 md:text-[1.4rem]">{s.k}</dd>
+                  <dt className="text-[12px] font-semibold uppercase tracking-[0.12em] text-text-low">{s.v}</dt>
+                  <dd className="mt-1.5 font-mono text-[1.35rem] font-bold text-gold-700 md:text-[1.5rem]">{s.k}</dd>
                 </div>
               ))}
             </dl>
@@ -63,7 +63,7 @@ export default function Hero() {
             <div className="relative">
               <div className="pointer-events-none absolute -inset-3 rounded-2xl bg-gradient-to-br from-gold/20 via-transparent to-transparent opacity-60 blur-2xl" aria-hidden />
               <SmartShell variant="dark" />
-              <p className="mt-3 px-1 text-[12px] text-text-low">
+              <p className="mt-3 px-1 text-[13px] text-text-low">
                 <span className="font-mono font-bold text-gold-700">smart&gt;</span> — the Livio Smart Shell. One prompt drives <span className="text-text-mid">Land · Grid · Hub · Review · Factory</span>.
               </p>
             </div>
@@ -72,7 +72,7 @@ export default function Hero() {
       </div>
 
       <div className="relative border-t border-line bg-white/60">
-        <div className="overflow-hidden py-3">
+        <div className="overflow-hidden py-3.5">
           <div className="ticker-track">
             {Array.from({ length: 2 }).flatMap((_, dup) =>
               [
@@ -85,7 +85,7 @@ export default function Hero() {
                 "75% faster construction",
                 "From first principles of physics",
               ].map((label, i) => (
-                <span key={`${dup}-${i}`} className="flex items-center gap-3 whitespace-nowrap text-[0.82rem] font-medium uppercase tracking-[0.12em] text-text-low">
+                <span key={`${dup}-${i}`} className="flex items-center gap-3 whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.1em] text-text-low">
                   {label}
                   <span className="text-gold-600/60">●</span>
                 </span>

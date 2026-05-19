@@ -22,10 +22,10 @@ export default function Methodology() {
       <div className="container-page relative grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <Reveal><span className="eyebrow-light">Methodology · Livio Grid</span></Reveal>
-          <Reveal delay={1}><h2 id="method-h" className="section-title mt-3 text-balance text-invert-hi">Inputs in. Designs out. Same way every time.</h2></Reveal>
+          <Reveal delay={1}><h2 id="method-h" className="section-title mt-4 text-balance text-invert-hi">Inputs in. Designs out. Same way every time.</h2></Reveal>
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-invert-mid">
-              Every output the Livio stack produces follows the methodology used on live Livio projects — same rack models, same valve specs, same cost framework. The variables that change are the site's, not ours.
+              Every output the Livio stack produces follows the methodology used on live Livio projects — same rack models, same valve specs, same cost framework. The variables that change are the site&rsquo;s, not ours.
             </p>
           </Reveal>
           <Reveal delay={3}>
@@ -39,25 +39,25 @@ export default function Methodology() {
           <Reveal delay={2}>
             <div className="grid gap-3 md:grid-cols-3">
               {inputs.map((i) => (
-                <div key={i.label} className="card-glass p-5">
-                  <div className="font-mono text-[0.72rem] font-bold uppercase tracking-[0.16em] text-gold-400">Input</div>
-                  <h3 className="mt-1 text-[1.05rem] font-bold text-invert-hi">{i.label}</h3>
-                  <p className="mt-2 text-[0.88rem] leading-[1.65] text-invert-low">{i.body}</p>
+                <div key={i.label} className="card-glass p-6">
+                  <div className="font-mono text-[12px] font-bold uppercase tracking-[0.14em] text-gold-400">Input</div>
+                  <h3 className="mt-1.5 text-[18px] font-bold text-invert-hi">{i.label}</h3>
+                  <p className="mt-2 text-[15px] leading-[1.6] text-invert-low">{i.body}</p>
                 </div>
               ))}
             </div>
           </Reveal>
 
           <Reveal delay={3}>
-            <div className="mt-6 card-glass p-6 md:p-7">
+            <div className="mt-6 card-glass p-7 md:p-8">
               <div className="flex flex-wrap items-center gap-3">
-                <div className="font-mono text-[0.72rem] font-bold uppercase tracking-[0.16em] text-gold-400">Outputs</div>
-                <span className="text-[0.85rem] text-invert-dim">Sized against the parcel — not a template.</span>
+                <div className="font-mono text-[12px] font-bold uppercase tracking-[0.14em] text-gold-400">Outputs</div>
+                <span className="text-[14px] text-invert-dim">Sized against the parcel — not a template.</span>
               </div>
-              <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+              <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
                 {outputs.map((o) => (
-                  <li key={o} className="flex items-start gap-2 text-[0.94rem] text-invert-mid">
-                    <span aria-hidden className="mt-[8px] inline-block h-1.5 w-1.5 rounded-full bg-gold-400" />
+                  <li key={o} className="flex items-start gap-2.5 text-[15px] text-invert-mid">
+                    <span aria-hidden className="mt-[9px] inline-block h-1.5 w-1.5 rounded-full bg-gold-400" />
                     <span>{o}</span>
                   </li>
                 ))}

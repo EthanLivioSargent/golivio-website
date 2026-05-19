@@ -10,7 +10,7 @@ export default function CTA() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal><span className="eyebrow-light">Bring Livio to your site</span></Reveal>
           <Reveal delay={1}>
-            <h2 id="cta-h" className="section-title mt-3 text-balance text-invert-hi" style={{ fontSize: "clamp(2rem, 4.4vw, 3.2rem)" }}>
+            <h2 id="cta-h" className="section-title mt-4 text-balance text-invert-hi" style={{ fontSize: "clamp(2.2rem, 4.6vw, 3.4rem)" }}>
               You have the load. We have the factory.
             </h2>
           </Reveal>
@@ -27,7 +27,7 @@ export default function CTA() {
             </div>
           </Reveal>
           <Reveal delay={4}>
-            <div className="mt-8 font-mono text-[0.84rem] text-invert-dim">
+            <div className="mt-8 font-mono text-[14px] text-invert-dim">
               <span className="font-bold text-gold-400">smart&gt;</span> ready when you are.
             </div>
           </Reveal>

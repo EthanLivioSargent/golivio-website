@@ -38,23 +38,12 @@ export default function SmartShell({ variant = "dark" }: { variant?: "dark" | "l
   useEffect(() => {
     const el = containerRef.current;
     if (!el || startedRef.current) return;
-    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
-      setRunning(true);
-      startedRef.current = true;
-      return;
-    }
-    const obs = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting && !startedRef.current) {
-            startedRef.current = true;
-            setRunning(true);
-            obs.disconnect();
-          }
-        }
-      },
-      { threshold: 0.25 }
-    );
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) { setRunning(true); startedRef.current = true; return; }
+    const obs = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting && !startedRef.current) { startedRef.current = true; setRunning(true); obs.disconnect(); }
+      }
+    }, { threshold: 0.25 });
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
@@ -63,14 +52,10 @@ export default function SmartShell({ variant = "dark" }: { variant?: "dark" | "l
     if (!running) return;
     let cancelled = false;
     const reduced = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
     async function play() {
       for (const line of SCRIPT) {
         if (cancelled) return;
-        if (line.kind === "pause") {
-          await wait(reduced ? 80 : line.ms);
-          continue;
-        }
+        if (line.kind === "pause") { await wait(reduced ? 80 : line.ms); continue; }
         if (line.kind === "input") {
           if (reduced) {
             setRendered((prev) => [...prev, { kind: "input", text: line.text }]);
@@ -108,11 +93,11 @@ export default function SmartShell({ variant = "dark" }: { variant?: "dark" | "l
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" aria-hidden />
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" aria-hidden />
         <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" aria-hidden />
-        <span className={`ml-3 select-none font-mono text-[11px] uppercase tracking-[0.18em] ${chromeText}`}>smart — the livio shell</span>
-        <span className={`ml-auto rounded border ${isDark ? "border-gold/30 bg-gold/10 text-gold-400" : "border-gold/40 bg-gold/15 text-gold-700"} px-1.5 py-[1px] font-mono text-[10px] font-bold`}>v1.0</span>
+        <span className={`ml-3 select-none font-mono text-[12px] font-semibold uppercase tracking-[0.14em] ${chromeText}`}>smart — the livio shell</span>
+        <span className={`ml-auto rounded border ${isDark ? "border-gold/30 bg-gold/10 text-gold-400" : "border-gold/40 bg-gold/15 text-gold-700"} px-2 py-[2px] font-mono text-[12px] font-bold`}>v1.0</span>
       </div>
 
-      <div className="min-h-[240px] space-y-1">
+      <div className="min-h-[260px] space-y-1">
         {rendered.map((l, i) =>
           l.kind === "input" ? (
             <div key={i} className="flex flex-wrap items-baseline gap-x-1">
@@ -143,6 +128,4 @@ export default function SmartShell({ variant = "dark" }: { variant?: "dark" | "l
   );
 }
 
-function wait(ms: number) {
-  return new Promise((res) => setTimeout(res, ms));
-}
+function wait(ms: number) { return new Promise((res) => setTimeout(res, ms)); }

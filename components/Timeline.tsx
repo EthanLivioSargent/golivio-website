@@ -14,7 +14,7 @@ export default function Timeline() {
       <div className="container-page relative">
         <div className="max-w-3xl">
           <Reveal><span className="eyebrow-gold">The 99-Day Timeline</span></Reveal>
-          <Reveal delay={1}><h2 id="timeline-h" className="section-title mt-3 text-balance">From parcel to compute, on a fiscal-quarter clock.</h2></Reveal>
+          <Reveal delay={1}><h2 id="timeline-h" className="section-title mt-4 text-balance">From parcel to compute, on a fiscal-quarter clock.</h2></Reveal>
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-text-mid">
               Every Livio project runs the same playbook. The timeline below is the methodology used on live builds — same modules, same interfaces, same vendors qualified on Hub.
@@ -22,17 +22,17 @@ export default function Timeline() {
           </Reveal>
         </div>
 
-        <ol className="relative mt-14 grid gap-5 md:grid-cols-4">
-          <div className="pointer-events-none absolute left-0 right-0 top-[22px] hidden h-px bg-gradient-to-r from-gold-500/0 via-gold-500/45 to-gold-500/0 md:block" aria-hidden />
+        <ol className="relative mt-14 grid gap-6 md:grid-cols-4">
+          <div className="pointer-events-none absolute left-0 right-0 top-[24px] hidden h-px bg-gradient-to-r from-gold-500/0 via-gold-500/45 to-gold-500/0 md:block" aria-hidden />
           {phases.map((p, i) => (
             <Reveal key={p.day} delay={(((i % 4) + 1) as 1 | 2 | 3 | 4)} as="li" className="relative">
-              <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-gold-500/55 bg-white shadow-card">
-                <span className="font-mono text-[0.78rem] font-bold text-gold-700">{String(i + 1).padStart(2, "0")}</span>
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold-500/55 bg-white shadow-card">
+                <span className="font-mono text-[13px] font-bold text-gold-700">{String(i + 1).padStart(2, "0")}</span>
               </div>
               <div className="mt-4">
-                <div className="font-mono text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-gold-700">{p.day}</div>
-                <h3 className="mt-1 text-[1.05rem] font-bold tracking-[-0.01em] text-text-hi">{p.title}</h3>
-                <p className="mt-2 text-[0.92rem] leading-[1.65] text-text-mid">{p.body}</p>
+                <div className="font-mono text-[14px] font-bold uppercase tracking-[0.12em] text-gold-700">{p.day}</div>
+                <h3 className="mt-1 text-[20px] font-bold tracking-[-0.01em] text-text-hi">{p.title}</h3>
+                <p className="mt-2 text-[15px] leading-[1.6] text-text-mid">{p.body}</p>
               </div>
             </Reveal>
           ))}

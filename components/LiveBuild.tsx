@@ -10,19 +10,11 @@ const ROWS = 3;
 const COUNT = COLS * ROWS;
 
 const STATE_FILL: Record<State, string> = {
-  staged: "#374151",
-  lifting: "#F97316",
-  installed: "#3B82F6",
-  qcd: "#22C55E",
+  staged: "#374151", lifting: "#F97316", installed: "#3B82F6", qcd: "#22C55E",
 };
-
 const STATE_LABEL: Record<State, string> = {
-  staged: "Staged",
-  lifting: "Lifting",
-  installed: "Installed",
-  qcd: "QC verified",
+  staged: "Staged", lifting: "Lifting", installed: "Installed", qcd: "QC verified",
 };
-
 const ORDER: State[] = ["staged", "lifting", "installed", "qcd"];
 
 export default function LiveBuild() {
@@ -81,7 +73,7 @@ export default function LiveBuild() {
       <div className="container-page relative grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <Reveal><span className="eyebrow-light">Live build state · Smart Shell</span></Reveal>
-          <Reveal delay={1}><h2 id="live-build-h" className="section-title mt-3 text-balance text-invert-hi">Every panel, every state, in real time.</h2></Reveal>
+          <Reveal delay={1}><h2 id="live-build-h" className="section-title mt-4 text-balance text-invert-hi">Every panel, every state, in real time.</h2></Reveal>
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-invert-mid">
               The operations app for every Livio project runs the same state machine: panels start <strong className="font-semibold text-invert-hi">staged</strong> on pallets, go <strong className="font-semibold text-invert-hi">lifting</strong> when the crane picks one up, snap <strong className="font-semibold text-invert-hi">installed</strong> when it bolts in, and turn <strong className="font-semibold text-invert-hi">QC verified</strong> after the inspector signs off. PMs see this exact wall, in 3D, on the live site view.
@@ -89,31 +81,31 @@ export default function LiveBuild() {
           </Reveal>
 
           <Reveal delay={3}>
-            <ul className="mt-8 space-y-3 text-[0.92rem]">
+            <ul className="mt-8 space-y-3.5 text-[15px]">
               {ORDER.map((s) => (
                 <li key={s} className="flex items-center gap-3">
-                  <span className="inline-block h-3.5 w-3.5 flex-shrink-0 rounded-sm" style={{ background: STATE_FILL[s] }} aria-hidden />
-                  <span className="font-medium text-invert-base">{STATE_LABEL[s]}</span>
-                  <span className="ml-auto font-mono text-[0.85rem] text-invert-low tabular-nums">{counts[s]} / {COUNT}</span>
+                  <span className="inline-block h-4 w-4 flex-shrink-0 rounded-sm" style={{ background: STATE_FILL[s] }} aria-hidden />
+                  <span className="font-semibold text-invert-base">{STATE_LABEL[s]}</span>
+                  <span className="ml-auto font-mono text-[14px] text-invert-low tabular-nums">{counts[s]} / {COUNT}</span>
                 </li>
               ))}
             </ul>
           </Reveal>
 
           <Reveal delay={4}>
-            <div className="mt-8 flex items-center gap-3 rounded-xl border border-lineDark2 bg-navy-900 px-4 py-3">
-              <span className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-400">Wall progress</span>
-              <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
+            <div className="mt-8 flex items-center gap-3 rounded-xl border border-lineDark2 bg-navy-900 px-5 py-4">
+              <span className="font-mono text-[12px] font-bold uppercase tracking-[0.14em] text-gold-400">Wall progress</span>
+              <div className="relative h-2 flex-1 overflow-hidden rounded-full bg-white/10">
                 <div className="absolute inset-y-0 left-0 bg-gradient-to-r from-blue-500 to-emerald-400 transition-[width] duration-700 ease-out" style={{ width: `${installedPct}%` }} aria-hidden />
               </div>
-              <span className="font-mono text-[0.85rem] font-bold text-invert-hi tabular-nums">{installedPct}%</span>
+              <span className="font-mono text-[14px] font-bold text-invert-hi tabular-nums">{installedPct}%</span>
             </div>
           </Reveal>
         </div>
 
         <div className="lg:col-span-7">
           <Reveal delay={2}>
-            <figure className="card-glass relative overflow-hidden p-6 md:p-8">
+            <figure className="card-glass relative overflow-hidden p-7 md:p-9">
               <div className="relative">
                 <div className="absolute -inset-2 rounded-md border border-dashed border-lineDark2" aria-hidden />
                 <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }} role="img" aria-label={`Live wall — ${counts.qcd} QC verified, ${counts.installed} installed, ${counts.lifting} lifting, ${counts.staged} staged of ${COUNT} total panels.`}>
@@ -130,13 +122,13 @@ export default function LiveBuild() {
                       }}>
                       <span className="pointer-events-none absolute inset-0 rounded-md" style={{ background: "linear-gradient(160deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 60%)" }} aria-hidden />
                       {s === "lifting" && (
-                        <span className="pointer-events-none absolute -top-3 left-1/2 -translate-x-1/2 font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-orange-300" aria-hidden>• lifting</span>
+                        <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-orange-300" aria-hidden>• lifting</span>
                       )}
                     </div>
                   ))}
                 </div>
               </div>
-              <figcaption className="mt-6 flex items-center justify-between text-[12px] text-invert-low">
+              <figcaption className="mt-6 flex items-center justify-between text-[14px] text-invert-low">
                 <span><span className="font-mono font-bold text-gold-400">live</span> · synthetic demo of the operations-app state machine</span>
                 <span className="font-mono tabular-nums">{COLS}×{ROWS} · {COUNT} panels</span>
               </figcaption>
