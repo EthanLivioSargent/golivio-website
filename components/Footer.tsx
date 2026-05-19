@@ -7,22 +7,23 @@ export default function Footer() {
         <div className="md:col-span-5">
           <div className="flex items-center gap-2 text-invert-hi"><Logo className="h-7 w-auto" /></div>
           <p className="mt-4 max-w-sm text-[16px] leading-[1.65] text-invert-low">
-            Livio is the AI Factory. 75% faster land to compute — under one methodology, one spec dictionary, and one command line.
+            The AI factory for data centers. 75% faster, land to compute.
           </p>
           <p className="mt-4 text-[14px] text-invert-dim">Los Altos, California · est. as Livio Building Systems</p>
         </div>
 
         <FooterCol title="The Stack" links={[
-          { label: "Livio Grid · free",     href: "https://grid.golivio.com", domain: "grid.golivio.com" },
-          { label: "Livio Hub · free",      href: "https://hub.golivio.com",  domain: "hub.golivio.com" },
-          { label: "Livio Smart Shell",     href: "#factory",                  domain: "smart>" },
-          { label: "LAIF (full EPC)",       href: "#stack",                    domain: "golivio.com" },
-          { label: "Livio Review · free",   href: "#stack",                    domain: "review.golivio.com" },
+          { label: "Grid · free",        href: "https://grid.golivio.com", domain: "grid.golivio.com" },
+          { label: "Hub · free",         href: "https://hub.golivio.com",  domain: "hub.golivio.com" },
+          { label: "Review · free",      href: "#stack",                    domain: "review.golivio.com" },
+          { label: "Smart Shell",        href: "#factory",                  domain: "smart>" },
+          { label: "Mobile",             href: "#live-build",               domain: "Field app" },
+          { label: "LAIF (full EPC)",    href: "#stack",                    domain: "golivio.com" },
         ]} />
 
         <FooterCol title="Company" links={[
           { label: "Console",       href: "https://console.golivio.com" },
-          { label: "Methodology",   href: "#methodology" },
+          { label: "How it works",  href: "#methodology" },
           { label: "Factory",       href: "#factory" },
           { label: "FAQ",           href: "#faq" },
         ]} />
@@ -49,13 +50,21 @@ export default function Footer() {
 function FooterCol({ title, links }: { title: string; links: { label: string; href: string; domain?: string }[] }) {
   return (
     <div className="md:col-span-2">
-      <h3 className="text-[13px] font-bold uppercase tracking-[0.12em] text-invert-mid">{title}</h3>
+      <h3 className="text-[13px] font-bold uppercase tracking-[0.1em] text-invert-mid">{title}</h3>
       <ul className="mt-4 space-y-3">
         {links.map((l) => (
           <li key={l.label}>
-            <a href={l.href} {...(l.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group inline-flex flex-col text-[15px] text-invert-low transition-colors hover:text-gold-400">
+            <a
+              href={l.href}
+              {...(l.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="group inline-flex flex-col text-[15px] text-invert-low transition-colors hover:text-gold-400"
+            >
               <span className="font-medium">{l.label}</span>
-              {l.domain && <span className="font-mono text-[12px] text-invert-dim group-hover:text-gold-400/80">{l.domain}</span>}
+              {l.domain && (
+                <span className="font-mono text-[12px] text-invert-dim group-hover:text-gold-400/80">
+                  {l.domain}
+                </span>
+              )}
             </a>
           </li>
         ))}

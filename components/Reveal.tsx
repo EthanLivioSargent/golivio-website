@@ -3,24 +3,30 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Lightweight scroll-reveal. Adds `.in-view` to children when they enter viewport.
- * Pure CSS does the actual transition — see globals.css `.reveal`.
- * Client-side only; SSR markup ships with the reveal class so layout is stable.
+ * Lightweight scroll-reveal.
+ *
+ * - `immediate`: render with `.in-view` already applied (no opacity-0 flash).
+ *   Pass this for above-the-fold content. The hero uses it on every Reveal.
+ * - Otherwise: starts at opacity-0 / translateY-24 and fades in when the
+ *   element enters viewport via IntersectionObserver.
  */
 export default function Reveal({
   children,
   className = "",
   as: Tag = "div",
   delay,
+  immediate = false,
 }: {
   children: React.ReactNode;
   className?: string;
   as?: keyof JSX.IntrinsicElements;
   delay?: 1 | 2 | 3 | 4;
+  immediate?: boolean;
 }) {
   const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    if (immediate) return; // already visible
     const el = ref.current;
     if (!el) return;
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
@@ -40,12 +46,13 @@ export default function Reveal({
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [immediate]);
 
   const delayClass = delay ? `reveal-${delay}` : "";
+  const initialView = immediate ? "in-view" : "";
   const Comp = Tag as React.ElementType;
   return (
-    <Comp ref={ref} className={`reveal ${delayClass} ${className}`.trim()}>
+    <Comp ref={ref} className={`reveal ${initialView} ${delayClass} ${className}`.trim()}>
       {children}
     </Comp>
   );

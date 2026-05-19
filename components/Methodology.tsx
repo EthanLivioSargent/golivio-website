@@ -1,18 +1,18 @@
 import Reveal from "./Reveal";
 
 const inputs = [
-  { label: "Power",   body: "Grid, co-gen, hydro, or nuclear proximity changes transformer config and project risk. Livio Grid prices and routes around the actual utility queue." },
-  { label: "Water",   body: "Free-cooling eligibility and flow rates drive CDU count and cooling-plant sizing. Real availability, not assumed." },
-  { label: "Climate", body: "Ambient wet-bulb determines whether adiabatic, air-side, or hybrid is viable — and what PUE is realistic at that site." },
+  { label: "Power",   body: "Utility queue, co-gen, hydro, nuclear — sets transformer config and project risk." },
+  { label: "Water",   body: "Real flow rates set cooling plant size. No assumed numbers." },
+  { label: "Climate", body: "Wet-bulb sets cooling type (adiabatic / air-side / hybrid) and realistic PUE." },
 ];
 
 const outputs = [
-  "Cluster sizing & rack counts",
-  "Transformer and switchgear topology",
-  "CDU count and cooling plant",
+  "Cluster + rack counts",
+  "Transformer and switchgear",
+  "CDU count + cooling plant",
   "Critical-path schedule",
-  "Parametric CapEx budget",
-  "Vendor shortlist (matched to Hub)",
+  "Parametric CapEx",
+  "Vendor shortlist (into Hub)",
 ];
 
 export default function Methodology() {
@@ -21,11 +21,11 @@ export default function Methodology() {
       <div className="pointer-events-none absolute inset-0 bg-grid-on-dark opacity-50" aria-hidden />
       <div className="container-page relative grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
-          <Reveal><span className="eyebrow-light">Methodology · Livio Grid</span></Reveal>
-          <Reveal delay={1}><h2 id="method-h" className="section-title mt-4 text-balance text-invert-hi">Inputs in. Designs out. Same way every time.</h2></Reveal>
+          <Reveal><span className="eyebrow-light">How it works · Grid</span></Reveal>
+          <Reveal delay={1}><h2 id="method-h" className="section-title mt-4 text-balance text-invert-hi">Inputs in. Designs out.</h2></Reveal>
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-invert-mid">
-              Every output the Livio stack produces follows the methodology used on live Livio projects — same rack models, same valve specs, same cost framework. The variables that change are the site&rsquo;s, not ours.
+              Same methodology on every project. The variables that change are the site&rsquo;s, not ours.
             </p>
           </Reveal>
           <Reveal delay={3}>
@@ -40,9 +40,9 @@ export default function Methodology() {
             <div className="grid gap-3 md:grid-cols-3">
               {inputs.map((i) => (
                 <div key={i.label} className="card-glass p-6">
-                  <div className="font-mono text-[12px] font-bold uppercase tracking-[0.14em] text-gold-400">Input</div>
-                  <h3 className="mt-1.5 text-[18px] font-bold text-invert-hi">{i.label}</h3>
-                  <p className="mt-2 text-[15px] leading-[1.6] text-invert-low">{i.body}</p>
+                  <div className="font-mono text-[12px] font-bold uppercase tracking-[0.12em] text-gold-400">Input</div>
+                  <h3 className="mt-1.5 text-[20px] font-bold text-invert-hi">{i.label}</h3>
+                  <p className="mt-2 text-[15px] leading-[1.55] text-invert-low">{i.body}</p>
                 </div>
               ))}
             </div>
@@ -51,12 +51,12 @@ export default function Methodology() {
           <Reveal delay={3}>
             <div className="mt-6 card-glass p-7 md:p-8">
               <div className="flex flex-wrap items-center gap-3">
-                <div className="font-mono text-[12px] font-bold uppercase tracking-[0.14em] text-gold-400">Outputs</div>
-                <span className="text-[14px] text-invert-dim">Sized against the parcel — not a template.</span>
+                <div className="font-mono text-[12px] font-bold uppercase tracking-[0.12em] text-gold-400">Outputs</div>
+                <span className="text-[14px] text-invert-dim">Sized to the parcel — not a template.</span>
               </div>
               <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
                 {outputs.map((o) => (
-                  <li key={o} className="flex items-start gap-2.5 text-[15px] text-invert-mid">
+                  <li key={o} className="flex items-start gap-2.5 text-[16px] text-invert-mid">
                     <span aria-hidden className="mt-[9px] inline-block h-1.5 w-1.5 rounded-full bg-gold-400" />
                     <span>{o}</span>
                   </li>
