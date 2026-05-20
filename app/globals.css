@@ -14,8 +14,15 @@
     @apply bg-cream text-text-hi font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.55;
+    /* Clean Helvetica rendering: real kerning pairs + ligatures, and a hair
+       of negative tracking so screen Helvetica reads tight and modern. */
+    font-feature-settings: "kern", "liga", "calt";
+    font-kerning: normal;
+    letter-spacing: -0.009em;
+    line-height: 1.6;
   }
+  /* Headings inherit a tighter optical tracking; component classes may override. */
+  h1, h2, h3 { letter-spacing: -0.025em; }
   ::selection { background: rgba(255, 193, 7, 0.32); color: #0a1628; }
   *:focus-visible { outline: 2px solid #ffc107; outline-offset: 3px; border-radius: 4px; }
   @media (prefers-reduced-motion: reduce) {
@@ -36,14 +43,14 @@
   .section-navy   { @apply bg-navy text-invert-base; }
   .section-black  { @apply bg-ink text-invert-base; }
 
-  /* Eyebrows: bumped from 12-13px to 14px for readability */
-  .eyebrow { @apply inline-block text-[14px] font-bold uppercase tracking-[0.16em]; }
+  /* Eyebrow — small caps label. Wider tracking reads as deliberate, not loud. */
+  .eyebrow { @apply inline-block text-[13px] font-bold uppercase tracking-[0.2em]; }
   .eyebrow-gold  { @apply eyebrow text-gold-700; }
   .eyebrow-light { @apply eyebrow text-gold-400; }
 
-  /* Section headings: larger floor for impact + Helvetica weight balance */
-  .section-title { @apply font-bold tracking-[-0.02em] leading-[1.05]; font-size: clamp(2rem, 4.2vw, 3rem); }
-  .section-deck  { @apply leading-relaxed; font-size: clamp(1.05rem, 1.7vw, 1.18rem); }
+  /* Section headings — Helvetica display: tight tracking, tight leading. */
+  .section-title { @apply font-bold tracking-[-0.03em] leading-[1.07]; font-size: clamp(2.05rem, 4.3vw, 3.1rem); }
+  .section-deck  { font-size: clamp(1.08rem, 1.55vw, 1.2rem); line-height: 1.62; letter-spacing: -0.011em; }
 
   /* Buttons — larger base type for easier scanning */
   .btn-gold {
@@ -103,16 +110,18 @@
     background-size: 24px 24px; background-position: -1px -1px;
   }
 
+  /* Scroll reveal — short travel, soft easing, so sections settle in
+     rather than jump. Staggered delays let grouped content flow in. */
   .reveal {
-    opacity: 0; transform: translateY(24px);
-    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+    opacity: 0; transform: translateY(18px);
+    transition: opacity 0.66s cubic-bezier(0.22,1,0.36,1), transform 0.66s cubic-bezier(0.22,1,0.36,1);
     will-change: opacity, transform;
   }
   .reveal.in-view { opacity: 1; transform: translateY(0); }
-  .reveal-1 { transition-delay: 0.05s; }
-  .reveal-2 { transition-delay: 0.12s; }
+  .reveal-1 { transition-delay: 0.06s; }
+  .reveal-2 { transition-delay: 0.13s; }
   .reveal-3 { transition-delay: 0.20s; }
-  .reveal-4 { transition-delay: 0.28s; }
+  .reveal-4 { transition-delay: 0.27s; }
 
   /* Terminal — bumped to 15px for legibility */
   .term { @apply rounded-2xl border border-lineDark2 bg-[#08101e] font-mono text-[14px] md:text-[15px] leading-[1.55] shadow-elev; }
