@@ -17,16 +17,16 @@ export default function Hero() {
           </Reveal>
 
           <Reveal immediate delay={1}>
-            <h1 id="hero-h" className="mt-6 text-balance font-bold tracking-[-0.035em] text-text-hi" style={{ fontSize: "clamp(2.8rem, 6.2vw, 5.2rem)", lineHeight: 1.02 }}>
-              Land to live compute.
+            <h1 id="hero-h" className="mt-6 text-balance font-bold tracking-[-0.035em] text-text-hi" style={{ fontSize: "clamp(2.7rem, 5.8vw, 4.9rem)", lineHeight: 1.04 }}>
+              Everything a data center needs.
               <br />
-              <span className="text-gold-700">In 99 days.</span>
+              <span className="text-gold-700">One company.</span>
             </h1>
           </Reveal>
 
           <Reveal immediate delay={2}>
             <p className="mt-6 max-w-2xl text-pretty text-[1.15rem] leading-[1.6] text-text-mid md:text-[1.27rem]">
-              Livio is the AI factory for hyperscale data centers. One playbook — software engineering, anonymous procurement, and a panelized building system. <strong className="font-bold text-text-hi">75% faster than the industry norm</strong>, at <strong className="font-bold text-text-hi">20&nbsp;MW to 1+&nbsp;GW</strong> per site.
+              Livio is the one-stop shop for AI data centers — <strong className="font-bold text-text-hi">land sourcing, engineering, procurement, a panelized building system, proposal QA, and full EPC delivery</strong>. Every step from a raw site to live compute, under one roof.
             </p>
           </Reveal>
 
@@ -38,7 +38,7 @@ export default function Hero() {
 
           <Reveal immediate delay={4}>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#stack" className="btn-gold">See the 6 tools <span aria-hidden>→</span></a>
+              <a href="#stack" className="btn-gold">See all six services <span aria-hidden>→</span></a>
               <a href="#factory" className="btn-outline-dark">How we build</a>
             </div>
           </Reveal>
@@ -68,14 +68,14 @@ export default function Hero() {
           <div className="ticker-track">
             {Array.from({ length: 2 }).flatMap((_, dup) =>
               [
+                "Land · site sourcing",
                 "Grid · engineering",
                 "Hub · procurement",
                 "Smart Shell · panel buildings",
                 "Review · proposal QA",
-                "Mobile · field ops",
                 "LAIF · full EPC",
                 "20 MW → 1+ GW",
-                "75% faster",
+                "One company, end to end",
               ].map((label, i) => (
                 <span key={`${dup}-${i}`} className="flex items-center gap-4 whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.12em] text-text-low">
                   {label}

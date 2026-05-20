@@ -12,13 +12,13 @@ export default function Footer() {
           <p className="mt-4 text-[14px] text-invert-dim">Los Altos, California · est. as Livio Building Systems</p>
         </div>
 
-        <FooterCol title="The Stack" links={[
-          { label: "Grid · free",        href: "https://grid.golivio.com", domain: "grid.golivio.com" },
-          { label: "Hub · free",         href: "https://hub.golivio.com",  domain: "hub.golivio.com" },
-          { label: "Review · free",      href: "#stack",                    domain: "review.golivio.com" },
-          { label: "Smart Shell",        href: "#factory",                  domain: "smart>" },
-          { label: "Mobile",             href: "#stack",                    domain: "Field app" },
-          { label: "LAIF (full EPC)",    href: "#stack",                    domain: "golivio.com" },
+        <FooterCol title="Services" links={[
+          { label: "Land",               href: "https://land.golivio.com",   domain: "land.golivio.com" },
+          { label: "Grid · free",        href: "https://grid.golivio.com",   domain: "grid.golivio.com" },
+          { label: "Hub · free",         href: "https://hub.golivio.com",    domain: "hub.golivio.com" },
+          { label: "Smart Shell",        href: "#factory",                   domain: "smart>" },
+          { label: "Review · free",      href: "https://review.golivio.com", domain: "review.golivio.com" },
+          { label: "LAIF (full EPC)",    href: "#stack",                     domain: "golivio.com" },
         ]} />
 
         <FooterCol title="Company" links={[

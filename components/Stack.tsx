@@ -15,6 +15,20 @@ type Product = {
 
 const products: Product[] = [
   {
+    name: "Livio Land",
+    sub: "Site sourcing",
+    href: "https://land.golivio.com",
+    domain: "land.golivio.com",
+    headline: "Power-ready data center land, matched to your load.",
+    bullets: [
+      "Parcels screened for power, fiber, water",
+      "Utility-queue and LOI status upfront",
+      "Climate + realistic PUE per site",
+      "Shovel-ready projects for offtakers",
+    ],
+    badge: "LAND", accent: "from-sky-200 via-sky-100",
+  },
+  {
     name: "Livio Grid",
     sub: "Engineering",
     href: "https://grid.golivio.com",
@@ -24,9 +38,9 @@ const products: Product[] = [
       "Power, water, climate → real design",
       "Sizes racks, transformers, cooling",
       "CapEx + critical path in one pass",
-      "Vendor shortlist into Hub",
+      "Vendor shortlist straight into Hub",
     ],
-    badge: "GRID", free: true, accent: "from-sky-200 via-sky-100",
+    badge: "GRID", free: true, accent: "from-sky-200 via-cream-100",
   },
   {
     name: "Livio Hub",
@@ -40,7 +54,7 @@ const products: Product[] = [
       "Value-engineering swap suggestions",
       "Anonymous until you engage",
     ],
-    badge: "HUB", free: true, accent: "from-sky-200 via-cream-100",
+    badge: "HUB", free: true, accent: "from-cream-100 via-sky-100",
   },
   {
     name: "Livio Smart Shell",
@@ -54,12 +68,12 @@ const products: Product[] = [
       "20 MW → 1+ GW, same kit",
       "AI-ready densities, day one",
     ],
-    badge: "SMART SHELL", monoDomain: true, accent: "from-cream-100 via-sky-100",
+    badge: "SMART SHELL", monoDomain: true, accent: "from-cream-100 via-sky-50",
   },
   {
     name: "Livio Review",
     sub: "Proposal QA",
-    href: "#",
+    href: "https://review.golivio.com",
     domain: "review.golivio.com",
     headline: "Vet any vendor proposal in 5 minutes, from first principles.",
     bullets: [
@@ -68,31 +82,17 @@ const products: Product[] = [
       "CapEx delta vs. Livio's model",
       "Vendor swaps that save money",
     ],
-    badge: "REVIEW", free: true, accent: "from-cream-100 via-sky-50",
-  },
-  {
-    name: "Livio Mobile",
-    sub: "Field operations",
-    href: "#",
-    domain: "Field app",
-    headline: "Eagle Eye view of every panel, every state, in real time.",
-    bullets: [
-      "Live state machine for the jobsite",
-      "Staged → lifting → installed → QC",
-      "PMs and crews on the same wall",
-      "Ties straight back to Grid + Hub",
-    ],
-    badge: "MOBILE", accent: "from-sky-100 via-sky-50",
+    badge: "REVIEW", free: true, accent: "from-sky-100 via-sky-50",
   },
   {
     name: "Livio AI Factory",
     sub: "Full EPC (LAIF)",
-    href: "/#methodology",
+    href: "#factory",
     domain: "golivio.com / LAIF",
-    headline: "Run the whole stack as one playbook. Land to compute in 99 days.",
+    headline: "The whole data center, delivered as one EPC.",
     bullets: [
-      "Grid → Hub → Smart Shell, end-to-end",
-      "One spec dictionary across tools",
+      "Land → Grid → Hub → Smart Shell, end-to-end",
+      "One spec dictionary across every step",
       "20 MW to 1+ GW per site",
       "Day-one operational, hand-off to ops",
     ],
@@ -106,16 +106,16 @@ export default function Stack() {
       <div className="pointer-events-none absolute inset-0 bg-grid-on-light opacity-50" aria-hidden />
       <div className="container-page relative">
         <div className="max-w-3xl">
-          <Reveal><span className="eyebrow-gold">The Stack</span></Reveal>
-          <Reveal delay={1}><h2 id="stack-h" className="section-title mt-4 text-balance">Six tools. One playbook.</h2></Reveal>
+          <Reveal><span className="eyebrow-gold">What Livio does</span></Reveal>
+          <Reveal delay={1}><h2 id="stack-h" className="section-title mt-4 text-balance">Six services. One company.</h2></Reveal>
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-text-mid">
-              <strong className="font-bold text-text-hi">Grid</strong> designs the site.{" "}
-              <strong className="font-bold text-text-hi">Hub</strong> sources it.{" "}
+              <strong className="font-bold text-text-hi">Land</strong> finds the site.{" "}
+              <strong className="font-bold text-text-hi">Grid</strong> engineers it.{" "}
+              <strong className="font-bold text-text-hi">Hub</strong> procures it.{" "}
               <strong className="font-bold text-text-hi">Smart Shell</strong> builds it.{" "}
-              <strong className="font-bold text-text-hi">Mobile</strong> runs the floor.{" "}
               <strong className="font-bold text-text-hi">Review</strong> audits any stage.{" "}
-              <strong className="font-bold text-text-hi">LAIF</strong> runs all five end-to-end. <span className="text-gold-700">Three are perpetually free.</span>
+              <strong className="font-bold text-text-hi">LAIF</strong> runs the whole thing end-to-end. <span className="text-gold-700">Three are free to use.</span>
             </p>
           </Reveal>
         </div>

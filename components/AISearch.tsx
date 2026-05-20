@@ -185,7 +185,7 @@ export default function AISearch() {
           <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden className="text-text-low">
             <path fill="currentColor" d="M11.74 10.34a5.5 5.5 0 1 0-1.4 1.4l3.0 3.0a1 1 0 0 0 1.42-1.42l-3.02-3zM3 7a4 4 0 1 1 8 0 4 4 0 0 1-8 0z" />
           </svg>
-          <span className="hidden text-[13px] font-bold uppercase tracking-[0.1em] text-text-low sm:inline">Ask Livio</span>
+          <span className="hidden text-[13px] font-bold uppercase tracking-[0.1em] text-text-low sm:inline">Livio AI</span>
         </div>
         <input
           ref={input} type="text" value={q}
