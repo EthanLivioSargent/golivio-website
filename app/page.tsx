@@ -8,6 +8,7 @@ import Factory from "@/components/Factory";
 import Timeline from "@/components/Timeline";
 import Methodology from "@/components/Methodology";
 import ReferenceDesigns from "@/components/ReferenceDesigns";
+import SafeCompute from "@/components/SafeCompute";
 import Numbers from "@/components/Numbers";
 import FAQ, { faqs } from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -45,6 +46,7 @@ export default function HomePage() {
         <Timeline />
         <Methodology />
         <ReferenceDesigns />
+        <SafeCompute />
         <Numbers />
         <FAQ />
         <CTA />

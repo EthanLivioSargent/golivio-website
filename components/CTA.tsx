@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { CALENDLY_URL } from "@/lib/site";
 
 export default function CTA() {
   return (
@@ -21,9 +22,9 @@ export default function CTA() {
           </Reveal>
           <Reveal delay={3}>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href="https://grid.golivio.com" className="btn-gold">Open Grid · free <span aria-hidden>→</span></a>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-gold">Book a 15-min call <span aria-hidden>→</span></a>
+              <a href="https://grid.golivio.com" className="btn-outline-light">Open Grid · free</a>
               <a href="https://hub.golivio.com" className="btn-outline-light">Open Hub · free</a>
-              <a href="https://land.golivio.com" className="btn-outline-light">Find land</a>
             </div>
           </Reveal>
           <Reveal delay={4}>

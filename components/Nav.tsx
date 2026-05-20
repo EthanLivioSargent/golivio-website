@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import { CALENDLY_URL } from "@/lib/site";
 
 const links = [
   { href: "#stack",       label: "Solutions" },
@@ -27,8 +28,13 @@ export default function Nav() {
           ))}
         </ul>
         <div className="flex items-center gap-2">
-          <a href="#stack" className="btn-gold py-2 text-[15px]">
-            Explore solutions
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold py-2 text-[15px]"
+          >
+            Book a 15-min call
             <span aria-hidden>→</span>
           </a>
         </div>

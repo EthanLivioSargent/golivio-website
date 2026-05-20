@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import AISearch from "./AISearch";
+import { CALENDLY_URL } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -39,7 +40,7 @@ export default function Hero() {
           <Reveal immediate delay={4}>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href="#stack" className="btn-gold">Explore solutions <span aria-hidden>→</span></a>
-              <a href="#factory" className="btn-outline-dark">How we build</a>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-outline-dark">Book a 15-min call</a>
             </div>
           </Reveal>
 
