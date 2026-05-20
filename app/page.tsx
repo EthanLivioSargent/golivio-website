@@ -7,6 +7,7 @@ import Bottleneck from "@/components/Bottleneck";
 import Factory from "@/components/Factory";
 import Timeline from "@/components/Timeline";
 import Methodology from "@/components/Methodology";
+import ReferenceDesigns from "@/components/ReferenceDesigns";
 import Numbers from "@/components/Numbers";
 import FAQ, { faqs } from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -43,6 +44,7 @@ export default function HomePage() {
         <Factory />
         <Timeline />
         <Methodology />
+        <ReferenceDesigns />
         <Numbers />
         <FAQ />
         <CTA />

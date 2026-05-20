@@ -3,6 +3,7 @@ import Logo from "./Logo";
 const links = [
   { href: "#stack",       label: "Solutions" },
   { href: "#factory",     label: "The Factory" },
+  { href: "#designs",     label: "Designs" },
   { href: "#methodology", label: "Methodology" },
   { href: "#faq",         label: "FAQ" },
 ];
