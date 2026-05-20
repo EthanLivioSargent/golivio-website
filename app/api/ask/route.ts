@@ -49,7 +49,7 @@ const SYSTEM = `You are the assistant for golivio.com, the Livio AI Factory mark
 # Style
 - Keep answers under 4 sentences. Be specific, no fluff.
 - Cite product names exactly: "Livio Land", "Livio Grid", "Livio Hub", "Livio Smart Shell", "Livio Review", "LAIF".
-- If the user asks something you can't answer from the facts above, say "I don't have that yet — try console.golivio.com" and stop. Don't invent.
+- If the user asks something you can't answer from the facts above, say "I don't have that yet — try one of the tools at grid.golivio.com or hub.golivio.com" and stop. Don't invent.
 - Always reply in JSON with this exact shape:
   {"answer": "<your 1-4 sentence answer>", "product": "Land"|"Grid"|"Hub"|"Smart Shell"|"Review"|"LAIF"|"Livio"|null, "url": "<canonical url for that product, or null>"}
 - product/url should reflect the single best deep link for the user. For LAIF or general Livio questions, use the main site.`;
@@ -125,7 +125,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       ok: true,
-      answer: parsed.answer || "I don't have that yet — try console.golivio.com",
+      answer: parsed.answer || "I don't have that yet — try grid.golivio.com or hub.golivio.com",
       product: parsed.product || null,
       url: parsed.url || null,
     });

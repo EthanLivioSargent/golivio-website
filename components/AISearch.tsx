@@ -75,8 +75,8 @@ const ENTRIES: Entry[] = [
     product: "Livio" },
   { q: "How do I get started?",
     aliases: ["start","sign in","console","onboard","get started","kick off"],
-    a: "Open the free tool that fits — Grid for sizing, Hub for procurement, Review for a proposal audit. Or sign in at console.golivio.com to kick off the full LAIF playbook.",
-    product: "Livio", url: "https://console.golivio.com" },
+    a: "Open the free tool that fits — Grid for sizing, Hub for procurement, Review for a proposal audit. For the full LAIF playbook, explore the solutions on this page.",
+    product: "Livio", url: "#stack" },
 ];
 
 /* ---- client keyword ranker (fallback) ---- */

@@ -18,8 +18,11 @@ const config: Config = {
         lineDark2: "rgba(255,255,255,0.16)",
       },
       fontFamily: {
+        // One typeface across the whole site — Helvetica everywhere.
+        // `mono` is kept as a token name but maps to the same Helvetica stack,
+        // so any `font-mono` element still renders in Helvetica.
         sans: ['"Helvetica Neue"', "Helvetica", "Arial", '"Liberation Sans"', "system-ui", "sans-serif"],
-        mono: ['"SF Mono"', "Menlo", "Monaco", "Consolas", "ui-monospace", "monospace"],
+        mono: ['"Helvetica Neue"', "Helvetica", "Arial", '"Liberation Sans"', "system-ui", "sans-serif"],
       },
       maxWidth: { page: "1200px", prose: "68ch" },
       backgroundImage: {

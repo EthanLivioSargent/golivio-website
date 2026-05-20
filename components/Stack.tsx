@@ -106,8 +106,8 @@ export default function Stack() {
       <div className="pointer-events-none absolute inset-0 bg-grid-on-light opacity-50" aria-hidden />
       <div className="container-page relative">
         <div className="max-w-3xl">
-          <Reveal><span className="eyebrow-gold">What Livio does</span></Reveal>
-          <Reveal delay={1}><h2 id="stack-h" className="section-title mt-4 text-balance">Six services. One company.</h2></Reveal>
+          <Reveal><span className="eyebrow-gold">Solutions</span></Reveal>
+          <Reveal delay={1}><h2 id="stack-h" className="section-title mt-4 text-balance">Six solutions. One company.</h2></Reveal>
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-text-mid">
               <strong className="font-bold text-text-hi">Land</strong> finds the site.{" "}

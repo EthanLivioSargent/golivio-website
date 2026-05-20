@@ -20,7 +20,7 @@ export const faqs = [
   { q: "Where is Livio based?",
     a: "Los Altos, California. Built on top of Livio Building Systems." },
   { q: "How do I start?",
-    a: "Open the free tool you need — Grid, Hub, or Review. Or sign in at console.golivio.com to kick off the full LAIF playbook." },
+    a: "Open the free tool you need — Grid, Hub, or Review. For the full LAIF playbook — land, engineering, procurement, and build — explore the solutions on this page." },
 ];
 
 export default function FAQ() {
@@ -33,7 +33,7 @@ export default function FAQ() {
           <Reveal delay={2}>
             <p className="section-deck mt-5 max-w-prose text-text-mid">
               Short answers. If yours isn&rsquo;t here,{" "}
-              <a className="font-bold text-gold-700 underline-offset-4 hover:underline" href="https://console.golivio.com">talk to the team</a>.
+              <a className="font-bold text-gold-700 underline-offset-4 hover:underline" href="#stack">explore the solutions</a>.
             </p>
           </Reveal>
         </div>

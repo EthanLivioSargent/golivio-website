@@ -4,8 +4,8 @@ import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://golivio.com";
 const SITE_NAME = "Livio — AI Factory";
-const TITLE_DEFAULT = "Livio — 75% Faster Land to Compute. The AI Factory for Hyperscale Data Centers.";
-const DESCRIPTION = "Livio is the AI Factory (LAIF) — engineering, procurement, and a pre-assembled building system that delivers AI data centers 75% faster, land to operational compute. Includes Livio Grid (engineering & underwriting), Livio Hub (procurement), Livio Smart Shell (panelized buildings), Livio Review (proposal QA), and LAIF (full EPC).";
+const TITLE_DEFAULT = "Livio — Technology for Data Center Construction";
+const DESCRIPTION = "Livio brings technology to the data center construction industry — the one-stop shop for AI data centers. One company, one platform across land sourcing, engineering, procurement, a panelized building system, proposal QA, and full EPC delivery. Includes Livio Land, Grid, Hub, Smart Shell, Review, and LAIF.";
 
 export const viewport: Viewport = {
   themeColor: "#f7f7f2",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website", siteName: SITE_NAME, url: SITE_URL,
     title: TITLE_DEFAULT, description: DESCRIPTION, locale: "en_US",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Livio — 75% Faster Land to Compute" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Livio — Technology for Data Center Construction" }],
   },
   twitter: {
     card: "summary_large_image", title: TITLE_DEFAULT, description: DESCRIPTION,

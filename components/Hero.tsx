@@ -18,15 +18,15 @@ export default function Hero() {
 
           <Reveal immediate delay={1}>
             <h1 id="hero-h" className="mt-6 text-balance font-bold tracking-[-0.035em] text-text-hi" style={{ fontSize: "clamp(2.7rem, 5.8vw, 4.9rem)", lineHeight: 1.04 }}>
-              Everything a data center needs.
+              We bring technology to
               <br />
-              <span className="text-gold-700">One company.</span>
+              <span className="text-gold-700">data center construction.</span>
             </h1>
           </Reveal>
 
           <Reveal immediate delay={2}>
             <p className="mt-6 max-w-2xl text-pretty text-[1.15rem] leading-[1.6] text-text-mid md:text-[1.27rem]">
-              Livio is the one-stop shop for AI data centers — <strong className="font-bold text-text-hi">land sourcing, engineering, procurement, a panelized building system, proposal QA, and full EPC delivery</strong>. Every step from a raw site to live compute, under one roof.
+              For decades, building a data center meant stitching together brokers, engineers, GCs, and vendors. Livio replaces all of it &mdash; one company, one platform, for <strong className="font-bold text-text-hi">land sourcing, engineering, procurement, the building system, proposal QA, and full EPC delivery</strong>.
             </p>
           </Reveal>
 
@@ -38,7 +38,7 @@ export default function Hero() {
 
           <Reveal immediate delay={4}>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#stack" className="btn-gold">See all six services <span aria-hidden>→</span></a>
+              <a href="#stack" className="btn-gold">Explore solutions <span aria-hidden>→</span></a>
               <a href="#factory" className="btn-outline-dark">How we build</a>
             </div>
           </Reveal>

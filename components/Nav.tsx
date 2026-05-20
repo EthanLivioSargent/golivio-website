@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 
 const links = [
-  { href: "#stack",       label: "The Stack" },
+  { href: "#stack",       label: "Solutions" },
   { href: "#factory",     label: "The Factory" },
   { href: "#methodology", label: "Methodology" },
   { href: "#faq",         label: "FAQ" },
@@ -14,7 +14,7 @@ export default function Nav() {
         <a href="/" className="group flex items-center gap-3 text-text-hi" aria-label="Livio home">
           <Logo className="h-7 w-auto text-text-hi transition-colors group-hover:text-gold-700" />
           <span className="hidden h-4 w-px bg-line2 sm:inline-block" aria-hidden />
-          <span className="hidden text-[13px] font-semibold tracking-[-0.005em] text-text-mid sm:inline-block">The AI factory for data centers</span>
+          <span className="hidden text-[13px] font-semibold tracking-[-0.005em] text-text-mid sm:inline-block">Technology for data center construction</span>
         </a>
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
@@ -26,11 +26,8 @@ export default function Nav() {
           ))}
         </ul>
         <div className="flex items-center gap-2">
-          <a href="https://console.golivio.com" className="hidden rounded-full border border-line2 px-4 py-2 text-[14px] font-semibold text-text-mid transition-all hover:border-text-hi hover:text-text-hi sm:inline-flex">
-            Sign in
-          </a>
           <a href="#stack" className="btn-gold py-2 text-[15px]">
-            Explore the stack
+            Explore solutions
             <span aria-hidden>→</span>
           </a>
         </div>

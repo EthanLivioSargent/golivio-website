@@ -22,7 +22,7 @@ export default function Footer() {
         ]} />
 
         <FooterCol title="Company" links={[
-          { label: "Console",       href: "https://console.golivio.com" },
+          { label: "Solutions",     href: "#stack" },
           { label: "How it works",  href: "#methodology" },
           { label: "Factory",       href: "#factory" },
           { label: "FAQ",           href: "#faq" },

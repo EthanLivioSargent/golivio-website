@@ -21,9 +21,9 @@ export default function CTA() {
           </Reveal>
           <Reveal delay={3}>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href="https://console.golivio.com" className="btn-gold">Sign in <span aria-hidden>→</span></a>
-              <a href="https://grid.golivio.com" className="btn-outline-light">Open Grid · free</a>
+              <a href="https://grid.golivio.com" className="btn-gold">Open Grid · free <span aria-hidden>→</span></a>
               <a href="https://hub.golivio.com" className="btn-outline-light">Open Hub · free</a>
+              <a href="https://land.golivio.com" className="btn-outline-light">Find land</a>
             </div>
           </Reveal>
           <Reveal delay={4}>
