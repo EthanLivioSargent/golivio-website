@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import Stack from "@/components/Stack";
 import Bottleneck from "@/components/Bottleneck";
 import Factory from "@/components/Factory";
-import LiveBuild from "@/components/LiveBuild";
 import Timeline from "@/components/Timeline";
-import Stack from "@/components/Stack";
 import Methodology from "@/components/Methodology";
 import Numbers from "@/components/Numbers";
 import FAQ, { faqs } from "@/components/FAQ";
@@ -39,11 +38,10 @@ export default function HomePage() {
       <Nav />
       <main id="main">
         <Hero />
+        <Stack />
         <Bottleneck />
         <Factory />
-        <LiveBuild />
         <Timeline />
-        <Stack />
         <Methodology />
         <Numbers />
         <FAQ />

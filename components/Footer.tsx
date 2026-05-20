@@ -17,7 +17,7 @@ export default function Footer() {
           { label: "Hub · free",         href: "https://hub.golivio.com",  domain: "hub.golivio.com" },
           { label: "Review · free",      href: "#stack",                    domain: "review.golivio.com" },
           { label: "Smart Shell",        href: "#factory",                  domain: "smart>" },
-          { label: "Mobile",             href: "#live-build",               domain: "Field app" },
+          { label: "Mobile",             href: "#stack",                    domain: "Field app" },
           { label: "LAIF (full EPC)",    href: "#stack",                    domain: "golivio.com" },
         ]} />
 

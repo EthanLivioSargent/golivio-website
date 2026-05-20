@@ -59,7 +59,7 @@ const URLS: Record<string, string> = {
   "Hub": "https://hub.golivio.com",
   "Smart Shell": "https://golivio.com/#factory",
   "Review": "https://review.golivio.com",
-  "Mobile": "https://golivio.com/#live-build",
+  "Mobile": "https://golivio.com/#stack",
   "LAIF": "https://golivio.com",
   "Livio": "https://golivio.com",
 };

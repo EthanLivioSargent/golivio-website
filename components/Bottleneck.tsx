@@ -5,22 +5,22 @@ export default function Bottleneck() {
   const LIVIO_PCT = 18;
 
   return (
-    <section className="section-sky relative border-b border-line/40 py-20 md:py-28" aria-labelledby="bottleneck-h">
+    <section id="compare" className="section-cream relative scroll-mt-24 border-b border-line/40 py-20 md:py-28" aria-labelledby="compare-h">
       <div className="pointer-events-none absolute inset-0 bg-grid-on-light-fine opacity-50" aria-hidden />
       <div className="container-page relative">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <Reveal><span className="eyebrow-gold">The Problem</span></Reveal>
+            <Reveal><span className="eyebrow-gold">How we compare</span></Reveal>
             <Reveal delay={1}>
-              <h2 id="bottleneck-h" className="section-title mt-4 text-balance">
-                The chips are ready. The buildings aren&rsquo;t.
+              <h2 id="compare-h" className="section-title mt-4 text-balance">
+                18 months &mdash; or 99 days.
               </h2>
             </Reveal>
           </div>
           <div className="lg:col-span-7 lg:pt-2">
             <Reveal delay={2}>
               <p className="section-deck max-w-prose text-text-mid">
-                AI capacity isn&rsquo;t blocked by chips or cooling. It&rsquo;s blocked by the <strong className="font-bold text-text-hi">building</strong>. Site selection, permits, long-lead equipment, and stick-built construction take <strong className="font-bold text-text-hi">18+ months</strong>. Livio turns that into <strong className="font-bold text-text-hi">99 days</strong> — by treating the data center as a product, not a project.
+                AI capacity isn&rsquo;t blocked by chips or cooling &mdash; it&rsquo;s blocked by the <strong className="font-bold text-text-hi">building</strong>. Every conventional path runs site selection, permits, long-lead equipment, and stick-built construction <strong className="font-bold text-text-hi">in series</strong>: 18+ months. Livio runs engineering, procurement, and the shell <strong className="font-bold text-text-hi">in parallel</strong> &mdash; 99 days, same scope.
               </p>
             </Reveal>
           </div>

@@ -34,9 +34,11 @@ Keep it current: when a fact here goes stale, fix it in the same change.
 
 ## Section order (`app/page.tsx`)
 
-Nav → Hero → Bottleneck → Factory → LiveBuild → Timeline → Stack → Methodology → Numbers → FAQ → CTA → Footer
+Nav → Hero → Stack → Comparison → Factory → Timeline → Methodology → Numbers → FAQ → CTA → Footer
 
-Shared components: `Reveal` (scroll-in), `Logo`, `SmartShell` (animated terminal), `AISearch` (Ask-Livio bar).
+The "Comparison" section is `components/Bottleneck.tsx` (id `#compare`) — the 18-months-vs-99-days contrast.
+
+Shared components: `Reveal` (scroll-in), `Logo`, `AISearch` (Ask-Livio bar).
 
 ## The six products
 
