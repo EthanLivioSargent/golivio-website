@@ -57,7 +57,7 @@ export default function Methodology() {
               <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
                 {outputs.map((o) => (
                   <li key={o} className="flex items-start gap-2.5 text-[16px] text-invert-mid">
-                    <span aria-hidden className="mt-[9px] inline-block h-1.5 w-1.5 rounded-full bg-gold-400" />
+                    <span aria-hidden className="mt-[11px] inline-block h-px w-3 flex-shrink-0 bg-gold-400" />
                     <span>{o}</span>
                   </li>
                 ))}
