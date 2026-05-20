@@ -1,8 +1,8 @@
 {
-  "name": "golivio-website",
+  "name": "golivio-web",
   "version": "1.0.0",
   "private": true,
-  "description": "Livio AI Factory marketing site — land to live compute in 99 days. Ties together Grid, Hub, Smart Shell, Review, Mobile, and LAIF. Next.js 14 + Tailwind.",
+  "description": "Livio AI Factory — Land to compute in 99 days. Marketing site tying together Livio Land, Grid, Hub, and the Slart shell.",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
