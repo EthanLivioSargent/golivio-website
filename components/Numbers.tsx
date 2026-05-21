@@ -6,7 +6,7 @@ type Stat = { target: number; suffix: string; prefix?: string; label: string; du
 
 const stats: Stat[] = [
   { target: 75, suffix: "%",   label: "Faster than the industry norm" },
-  { target: 99, suffix: " days", label: "Land to live compute" },
+  { target: 99, suffix: " days", label: "End-to-end delivery" },
   { target: 80, suffix: "+",   label: "Verified vendors in Hub" },
   { target: 1,  suffix: "+ GW", label: "Capacity per site" },
 ];
