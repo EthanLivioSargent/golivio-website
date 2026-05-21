@@ -203,7 +203,7 @@ export default function AISearch() {
         </div>
       </form>
 
-      <div className="mt-3.5 flex flex-wrap items-center gap-2 text-[13px]">
+      <div className="mt-3.5 flex flex-wrap items-center justify-center gap-2 text-[13px]">
         <span className="font-bold uppercase tracking-[0.1em] text-text-low">Try:</span>
         {PRESETS.map((p) => (
           <button key={p} onClick={() => ask(p)} className="rounded-full border border-line2 bg-white/70 px-3.5 py-1.5 font-medium text-text-mid transition-all hover:border-gold-500 hover:text-text-hi">
